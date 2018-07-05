@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <style>
+    
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+  </style>
+
+  <body class="lab">
+
+    
+  <div class="uk-offcanvas-content">
+    <div id="offcanvas-usage" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav">
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-01-gomix-intro/book-a-gomix-intro/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-1 Gomix Intro
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-02-js-intro/book-a-js-introduction/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-2 JS Intro
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-03-app-controllers+views/book-a-gomix-playlist-1/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-3 Gomix Playlist 1
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-4 Gomix Playlist 2
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-05-app-models/book-a-gomix-playlist-3/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-5 Gomix Playlist 3
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-06-gomark/book-a-gomark-1/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-gomark-1
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-a-js-arrays/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-6 JS Arrays
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-b-gomark-2/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-gomark-2
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-a-gomark-3/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-gomark-3
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-b-gomix-sessions/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-8 Gomix Sessions
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-09-js-objects/book-a-js-objects/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-9 JS Objects
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-a-setup/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-10a Cloudinary Setup
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-b-gomix-cloudinary/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-10b gomix-picture-store
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-11-js-functions/book-a-js-functions/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-11 Functions
+                </a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-12-js-nested-objects/book-a-js-nested-objects/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-12 Nested Objects
+                </a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <div uk-sticky>
+      <nav class="uk-navbar">
+        <div class="uk-navbar-left">
+          <ul class="uk-subnav uk-background-secondary uk-subnav-pill">
+            <li><a href="#offcanvas-usage" uk-icon="icon: menu" , uk-toggle title="Switch Lab" pos="bottom"
+                   uk-tooltip></a></li>
+            <li class="uk-active"><a href="../index.html" uk-icon="icon: chevron-up" uk-toggle title="Parent Topic"
+                                     pos="bottom" uk-tooltip>Gomix: Sessions </a></li>
+          </ul>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-subnav uk-background-secondary uk-subnav-pill"
+              uk-switcher="connect: .switcher-container">
+            
+              <li><a href="#">Lab-gomark-3</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="uk-container uk-container-expand">
+      <ul class="uk-switcher switcher-container">
+        
+          <li> <h1>Solution</h1>
+<p>Final version of the Assignment 1 Gomark application</p>
+<p>Version 3 of the Gomark assignment can be downloaded from here:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/gomark-3">https://github.com/edeleastar/gomark-3</a></li>
+</ul>
+<p>You can download this and run locally as outlined in earlier labs.</p>
+<h2>Running in Gomix</h2>
+<p>In Gomix, create a new project, and import from github: <code>edeleastar/gomark-3</code>.</p>
+<h2>Running in Webstorm</h2>
+<p>You can also download this IDE here:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/webstorm/">https://www.jetbrains.com/webstorm/</a></li>
+</ul>
+<p>Before doing so - apply for the student pack here:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/student/">https://www.jetbrains.com/student/</a></li>
+</ul>
+<p>Be sure to use your WIT email when you register.</p>
+</li>
+        
+      </ul>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass('');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('uk-label uk-text-lowercase');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertAfter($images[i]);
+      $('<br>').insertAfter($images[i]);
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>
