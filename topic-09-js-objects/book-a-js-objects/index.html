@@ -1,23 +1,27 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <style>
     
 
@@ -63,194 +67,138 @@ h3 {
 
 
   </style>
+</head>
 
-  <body class="lab">
+<body>
 
+
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
     
-  <div class="uk-offcanvas-content">
-    <div id="offcanvas-usage" uk-offcanvas>
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav">
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-01-gomix-intro/book-a-gomix-intro/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-1 Gomix Intro
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-02-js-intro/book-a-js-introduction/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-2 JS Intro
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-03-app-controllers+views/book-a-gomix-playlist-1/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-3 Gomix Playlist 1
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-4 Gomix Playlist 2
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-05-app-models/book-a-gomix-playlist-3/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-5 Gomix Playlist 3
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-06-gomark/book-a-gomark-1/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-gomark-1
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-a-js-arrays/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-6 JS Arrays
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-b-gomark-2/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-gomark-2
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-a-gomark-3/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-gomark-3
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-b-gomix-sessions/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-8 Gomix Sessions
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-09-js-objects/book-a-js-objects/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-9 JS Objects
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-a-setup/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-10a Cloudinary Setup
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-b-gomix-cloudinary/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-10b gomix-picture-store
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-11-js-functions/book-a-js-functions/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-11 Functions
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-12-js-nested-objects/book-a-js-nested-objects/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-12 Nested Objects
-                </a>
-              </li>
-            
-          
-        </ul>
-      </div>
-    </div>
+      <a href="../index.html"> JS: Objects  </a>
+    
+  </header>
+  <div class="right tab-menu menu">
+    
+      <a class="item" data-tab="Lab-9 JS Objects">
+        Lab-9 JS Objects
+      </a>
+    
+      <a class="item" data-tab="01">
+        01
+      </a>
+    
+      <a class="item" data-tab="02">
+        02
+      </a>
+    
+      <a class="item" data-tab="03">
+        03
+      </a>
+    
+      <a class="item" data-tab="04">
+        04
+      </a>
+    
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
+    
+      <a class="item" data-tab=".">
+        .
+      </a>
+    
   </div>
+</div>
 
-
-    <div uk-sticky>
-      <nav class="uk-navbar">
-        <div class="uk-navbar-left">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill">
-            <li><a href="#offcanvas-usage" uk-icon="icon: menu" , uk-toggle title="Switch Lab" pos="bottom"
-                   uk-tooltip></a></li>
-            <li class="uk-active"><a href="../index.html" uk-icon="icon: chevron-up" uk-toggle title="Parent Topic"
-                                     pos="bottom" uk-tooltip>JS: Objects </a></li>
-          </ul>
-        </div>
-        <div class="uk-navbar-right">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill"
-              uk-switcher="connect: .switcher-container">
-            
-              <li><a href="#">Lab-9 JS Objects</a></li>
-            
-              <li><a href="#">01</a></li>
-            
-              <li><a href="#">02</a></li>
-            
-              <li><a href="#">03</a></li>
-            
-              <li><a href="#">04</a></li>
-            
-              <li><a href="#">Exercises</a></li>
-            
-              <li><a href="#">.</a></li>
-            
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <div class="uk-container uk-container-expand">
-      <ul class="uk-switcher switcher-container">
-        
-          <li> <h1>Objectives</h1>
+<div class="ui pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-01-gomix-intro/book-a-gomix-intro/index.html">Lab-1 Gomix Intro </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-02-js-intro/book-a-js-introduction/index.html">Lab-2 JS Intro </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-03-app-controllers+views/book-a-gomix-playlist-1/index.html">Lab-3 Gomix Playlist 1 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">Lab-4 Gomix Playlist 2 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-05-app-models/book-a-gomix-playlist-3/index.html">Lab-5 Gomix Playlist 3 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-06-gomark/book-a-gomark-1/index.html">Lab-gomark-1 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-a-js-arrays/index.html">Lab-6 JS Arrays </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-b-gomark-2/index.html">Lab-gomark-2 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-a-gomark-3/index.html">Lab-gomark-3 </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-b-gomix-sessions/index.html">Lab-8 Gomix Sessions </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-09-js-objects/book-a-js-objects/index.html">Lab-9 JS Objects </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-a-setup/index.html">Lab-10a Cloudinary Setup </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-b-gomix-cloudinary/index.html">Lab-10b gomix-picture-store </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-11-js-functions/book-a-js-functions/index.html">Lab-11 Functions </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-12-js-nested-objects/book-a-js-nested-objects/index.html">Lab-12 Nested Objects </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment">
+      <br>
+      
+        <div class="ui tab segment lab" data-tab="Lab-9 JS Objects">
+          <h1>Objectives</h1>
 <p>Object basics and Object iteration.</p>
 <h2>Object Basics</h2>
 <ul>
@@ -263,9 +211,11 @@ Lab-12 Nested Objects
 <li>Understand how to iterate through an object using a <code>for...in</code> loop</li>
 <li>Determine if a key exists in an object using an <code>if...in</code> statement</li>
 </ul>
-</li>
-        
-          <li> <h1>Object Basics I</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="01">
+          <h1>Object Basics I</h1>
 <h3>Introduction</h3>
 <p>In JavaScript, along with primitives we have objects. Objects allow you to map keys to values. For example, the key <code>&#39;name&#39;</code> could map to <code>&quot;Tim&quot;</code>. Or the key <code>&#39;isInstructor&#39;</code> could map to the boolean <code>true</code>. These are example of key value mappings. When you want to know the name property of the object, you look it up and get the value back, which is <code>&quot;Tim&quot;</code> in this case. Here is an example of declaring an object:</p>
 <pre><code>var firstObj = {
@@ -358,9 +308,11 @@ obj.person; // undefined this is because the key is not person it is Tom.</code>
 <ul>
 <li>Create a goMark object that has &#39;url&#39;, &#39;description&#39;, and &#39;rating&#39; as keys. Initialise the object with some values and log to the console.</li>
 </ul>
-</li>
-        
-          <li> <h1>Object Basics II</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="02">
+          <h1>Object Basics II</h1>
 <h3>Keys Are Always Strings in JavaScript</h3>
 <p>It is important to note that the type of a key in JavaScript is always a string. Let&#39;s say we create the following object of some employee id to the employee name:</p>
 <pre><code>var idToName = {
@@ -418,9 +370,11 @@ obj;
 <li>Access each value from your goMark object using both dot notation and brakcet notation.</li>
 <li>Add a key for &#39;category&#39; to your object. Remove the key and value for &#39;rating&#39;.</li>
 </ul>
-</li>
-        
-          <li> <h1>Object Iteration I</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="03">
+          <h1>Object Iteration I</h1>
 <h4>Looping over objects</h4>
 <p>One of the most important ideas in programming is the idea of iteration, or looping. Let&#39;s say we want to print out all of the values in an object. One way we can do this is by printing the values individually, one per line.</p>
 <pre><code>var obj = {
@@ -466,9 +420,11 @@ for (var singleKey in instructor) {
 <li>after you have logged the fields, dynamically add a new field <code>title</code>, and log the fields again</li>
 <li>after you have logged the field the second time, delete a field and log them again.</li>
 </ul>
-</li>
-        
-          <li> <h1>Object Iteration II</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="04">
+          <h1>Object Iteration II</h1>
 <h4>if...in: Determining If a Key Exists in an Object</h4>
 <p>Sometimes, we just want to check and see if a certain key exists in an object. To do that we use a <code>if...in</code> statement. Here is an example</p>
 <pre><code>var obj = {
@@ -509,9 +465,11 @@ if (&quot;nothing&quot; in obj){
 <li>Add a key of your name and a value for your the year you started in W.I.T.</li>
 <li>Write an if statement that console.logs your name and the year you started in W.I.T to the console if the key of your name is contained in the object.</li>
 </ul>
-</li>
-        
-          <li> <h1>Exercises</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Exercises">
+          <h1>Exercises</h1>
 <p>Using the files you created earlier:</p>
 <ul>
 <li>objects-09.html</li>
@@ -538,9 +496,11 @@ if (&quot;nothing&quot; in obj){
 <li>Using a loop, console.log all of the keys in the playList object.</li>
 <li>Using a loop, console.log all of the values in the playList object.</li>
 </ol>
-</li>
-        
-          <li> <h1>JS Objects Exercise Solutions</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab=".">
+          <h1>JS Objects Exercise Solutions</h1>
 <pre><code class="lang-js">var programming = {
     languages: [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;Ruby&quot;],
     isChallenging: true,
@@ -582,26 +542,67 @@ for (var key in programming){
 for (var key in programming){
     console.log(programming[key]);
 }</code></pre>
-</li>
-        
-      </ul>
-    </div>
 
-    <script>
-      $(document).ready(function() {
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+  $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
   const $images = $('.lab img');
   jQuery.each($images, function(i) {
     if ($images[i].alt.length > 0) {
-      const divImg = $(document.createElement('div')).addClass('');
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('uk-label uk-text-lowercase');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
-      $(divLabel).insertAfter($images[i]);
-      $('<br>').insertAfter($images[i]);
+      $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
+</script>
+</body>
 </html>
