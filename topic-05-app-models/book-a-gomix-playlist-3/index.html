@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
-        type="text/css">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
-        rel="stylesheet"/>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <style>
-    
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
 
 body {
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
@@ -66,145 +66,173 @@ h3 {
 
 
 
-  </style>
-</head>
+      
 
-<body>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
 
 
 
-<div class="ui fixed top pointing inverted stackable menu labmenu">
-  <header class="header item">
-    <i id="toc" class="sitemap icon"></i>
-    
-      <a href="../index.html"> Gomix: Model View Controller  </a>
-    
-  </header>
-  <div class="right tab-menu menu">
-    
-      <a class="item" data-tab="Lab-5 Gomix Playlist 3">
-        Lab-5 Gomix Playlist 3
-      </a>
-    
-      <a class="item" data-tab="Exercise Solutions">
-        Exercise Solutions
-      </a>
-    
-      <a class="item" data-tab="01">
-        01
-      </a>
-    
-      <a class="item" data-tab="02">
-        02
-      </a>
-    
-      <a class="item" data-tab="03">
-        03
-      </a>
-    
-      <a class="item" data-tab="04">
-        04
-      </a>
-    
-      <a class="item" data-tab="Exercises">
-        Exercises
-      </a>
-    
+    </style>
+  </head>
+
+  <body class="uk-background-muted">
+    <div class="wrapper">
+      <div class="content">
+        <div style="height:1000px;">
+          
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../index.html"> Gomix: Model View Controller  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-5 Gomix Playlist 3">
+          Lab-5 Gomix Playlist 3
+        </a>
+      
+        <a class="item" data-tab="Exercise Solutions">
+          Exercise Solutions
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
   </div>
-</div>
 
-<div class="ui pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    <br><br>
-    
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-01-gomix-intro/book-a-gomix-intro/index.html">Lab-1 Gomix Intro </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-01-gomix-intro/book-a-gomix-intro/index.html">Lab-1 Gomix Intro </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-02-js-intro/book-a-js-introduction/index.html">Lab-2 JS Intro </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-02-js-intro/book-a-js-introduction/index.html">Lab-2 JS Intro </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-03-app-controllers+views/book-a-gomix-playlist-1/index.html">Lab-3 Gomix Playlist 1 </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">Lab-4 Gomix Playlist 2 </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-03-app-controllers+views/book-a-gomix-playlist-1/index.html">Lab-3 Gomix Playlist 1 </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-05-app-models/book-a-gomix-playlist-3/index.html">Lab-5 Gomix Playlist 3 </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-06-gomark/book-a-gomark-1/index.html">Lab-gomark-1 </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">Lab-4 Gomix Playlist 2 </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-a-js-arrays/index.html">Lab-6 JS Arrays </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-b-gomark-2/index.html">Lab-gomark-2 </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-05-app-models/book-a-gomix-playlist-3/index.html">Lab-5 Gomix Playlist 3 </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-a-gomark-3/index.html">Lab-gomark-3 </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-b-gomix-sessions/index.html">Lab-8 Gomix Sessions </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-06-gomark/book-a-gomark-1/index.html">Lab-gomark-1 </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-09-js-objects/book-a-js-objects/index.html">Lab-9 JS Objects </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-a-setup/index.html">Lab-10a Cloudinary Setup </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-a-js-arrays/index.html">Lab-6 JS Arrays </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-b-gomix-cloudinary/index.html">Lab-10b gomix-picture-store </a>
+        
       
-    
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-11-js-functions/book-a-js-functions/index.html">Lab-11 Functions </a>
+        
       
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-07-js-arrays/book-b-gomark-2/index.html">Lab-gomark-2 </a>
+        
+          <a class="item"
+             href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-12-js-nested-objects/book-a-js-nested-objects/index.html">Lab-12 Nested Objects </a>
+        
       
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-a-gomark-3/index.html">Lab-gomark-3 </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-08-gomix-sessions/book-b-gomix-sessions/index.html">Lab-8 Gomix Sessions </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-09-js-objects/book-a-js-objects/index.html">Lab-9 JS Objects </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-a-setup/index.html">Lab-10a Cloudinary Setup </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-10-gomix-images/book-b-gomix-cloudinary/index.html">Lab-10b gomix-picture-store </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-11-js-functions/book-a-js-functions/index.html">Lab-11 Functions </a>
-      
-    
-      
-        <a class="item"
-           href="https://edeleastar-portfolio.github.io//web-app-dev-js//topic-12-js-nested-objects/book-a-js-nested-objects/index.html">Lab-12 Nested Objects </a>
-      
-    
-  </div>
-  <div class="pusher" tabindex="-1">
-    <div class="ui basic segment">
-      <br>
-      
-        <div class="ui tab segment lab" data-tab="Lab-5 Gomix Playlist 3">
-          <h1>Objectives</h1>
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-5 Gomix Playlist 3">
+            <h1>Objectives</h1>
 <p>Enable Songs and Playlists to be added via simple forms.</p>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="Exercise Solutions">
-          <h1>Exercise Solutions</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercise Solutions">
+            <h1>Exercise Solutions</h1>
 <p>This lab requires that the <code>gomix-playlist-2</code> lab be completed. If you have lost your solution, create a new project in Gomix and select the <code>import from github</code> option and enter <code>edeleastar/gomix-playlist-2</code> to import a completed version.</p>
 <h2>Exercise 1: UX Enhancements &amp; Exercise 3: listplaylists partial</h2>
 <p>Introduce a &#39;Delete Playlist&#39; button for each playlist, represented by a <code>trash</code> icon.</p>
@@ -249,10 +277,10 @@ router.get(&#39;/dashboard/deleteplaylist/:id&#39;, dashboard.deletePlaylist);
     _.remove(this.playlistCollection, { id: id });
   },</code></pre>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="01">
-          <h1>Adding a Song</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Adding a Song</h1>
 <p>Before adding a song, lets align the delete button appearance with the delete playlist. Use this icon button instead of the existing one:</p>
 <pre><code class="lang-html">&lt;a href=&quot;/playlist/{{../playlist.id}}/deletesong/{{id}}&quot; class=&quot;ui icon button&quot;&gt;
   &lt;i class=&quot;icon trash&quot;&gt;&lt;/i&gt;
@@ -311,10 +339,10 @@ router.get(&#39;/dashboard/deleteplaylist/:id&#39;, dashboard.deletePlaylist);
 <p>Try this now and verify that you can add songs.</p>
 <p>Can you delete one of the songs you have just added? Can you delete one of the songs that have been in there already? Can you explain what is going wrong?</p>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="02">
-          <h1>ID Management</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>ID Management</h1>
 <p>Deleting a song you have manually added using the form generates the following:</p>
 <pre><code>Cannot GET /playlist/02/deletesong/</code></pre>
 <p>However, pre-populated songs can still be deleted. What is going on here?</p>
@@ -357,10 +385,10 @@ router.get(&#39;/dashboard/deleteplaylist/:id&#39;, dashboard.deletePlaylist);
   };</code></pre>
 <p>Try this now and make sure the new songs can be deleted. View the source to reveal the uuid-style ids the new songs have.</p>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="03">
-          <h1>Adding playlists</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Adding playlists</h1>
 <p>Modeled on the Song addition, we can quickly implement the necessary form, route, controller function and model update to support adding a new playlist.</p>
 <h2>views/partials/addplaylist.hbs</h2>
 <pre><code class="lang-html">&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/dashboard/addplaylist&quot; method=&quot;POST&quot;&gt;
@@ -398,10 +426,10 @@ router.get(&#39;/dashboard/deleteplaylist/:id&#39;, dashboard.deletePlaylist);
 },</code></pre>
 <p>We should now be able to add new playlists.</p>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="04">
-          <h1>Persistence</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Persistence</h1>
 <p>You will note that, even though we are able to add/delete playlists/songs, every time the app restarts then we are left with the same initial playlist. i.e. none of the changes we make are <code>persisted</code> beyond the life of the program execution.</p>
 <p>This is the field of databases - and beyond the scope of this course for the moment. However, we can implement something like a database, but simpler, which can serve our needs. Introduce this new class into the project:</p>
 <h2>models/json-store.js</h2>
@@ -502,20 +530,22 @@ module.exports = playlistStore;</code></pre>
 <p>The app should work now as before, except this time changes to the playlists will be <code>persisted</code> to the json file. This means that if the app has to be restarted, it will have preserved any changes to the playlist in the JSON file, which will be reloaded when the app restarts.</p>
 <p>Try this now - and keep an eye on the <code>playlist-store.json</code> file. Because of the way Gomix works, you may only see the updated json when you refresh the page.</p>
 
-        </div>
-      
-        <div class="ui tab segment lab" data-tab="Exercises">
-          <h1>Exercises</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
 <p>If you want to download a complete version of the app as it should be at the end of this lab, then create a new Gomix project, and import <code>edeleastar/gomix-playlist-3</code>.</p>
 
-        </div>
-      
+          </div>
+        
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  $(document).on('keydown', function(e) {
+
+
+  <script>
+    $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -535,7 +565,7 @@ module.exports = playlistStore;</code></pre>
   }
 });
 
-  $(document).ready(function() {
+    $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
@@ -568,6 +598,16 @@ module.exports = playlistStore;</code></pre>
     .sidebar('attach events', '#toc');
 });
 
-</script>
-</body>
+  </script>
+
+
+        </div>
+      </div>
+      <div class="footer"> <p> Powered by <a
+          href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a>
+        Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
+      </div>
+    </div>
+  </body>
+
 </html>
